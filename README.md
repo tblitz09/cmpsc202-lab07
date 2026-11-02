@@ -17,7 +17,7 @@ Suppose we're going hiking. We have items $1, \ldots, n$ that we could pack in m
 
 **Question:** Which of the three problem variations can be solved using the dynamic programming approaches we've studied in lecture? Explain your reasoning.
 
-*Your Answer:* All of the three problem variations can be solved using dynamic programming approaches. 
+*Your Answer:* All of the three problem variations can be solved using dynamic programming approaches. All of these variations involve some type of recursive call that involves taking away a certain weight from the capacity of the Knapsack. The first and second varaition involves taking away the weight of items from the capacity to maximize value. The third involves taking away the value of items from the minimum value to minimize the weight needed to reach a value. 
 
 ## Part 2: The Naive Recursive Algorithm
 
