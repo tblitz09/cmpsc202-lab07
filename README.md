@@ -1,6 +1,6 @@
 # Lab 07: The Integer-Valued Knapsack Problem
 
-**Name:** _______________________  
+**Name:** Tyler Biss
 
 ## Introduction
 In this lab, you will explore different variations of the Knapsack problem and design a dynamic programming solution for one of them. You may work in small groups or individually, but everyone should write up their own answers to the questions below. 
@@ -17,7 +17,7 @@ Suppose we're going hiking. We have items $1, \ldots, n$ that we could pack in m
 
 **Question:** Which of the three problem variations can be solved using the dynamic programming approaches we've studied in lecture? Explain your reasoning.
 
-*Your Answer:*
+*Your Answer:* All of the three problem variations can be solved using dynamic programming approaches. 
 
 ## Part 2: The Naive Recursive Algorithm
 
@@ -40,7 +40,7 @@ Function MaxValue(W):
 
 **Question:** Which of the three problem variations (1, 2, or 3) does this algorithm solve? How do you know? Explain your reasoning.
 
-*Your Answer:*
+*Your Answer:* The recursive algorithm above solves the 2nd variation. The algorithm above takes the weight that the sack and iterates from 1 to the weight it can hold. With each of the loops, it checks the most amount of value it can gain from an item even if it involves having multiple of an item without going over the capacity. There is no part of the code that keeps the algorithm from using more than one of an item but it is variation 2 because it goes for the maximum value. 
 
 ## Part 3: Recursion Tree
 
