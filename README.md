@@ -59,7 +59,9 @@ Consider the following simple example:
 
 **Question:** Derive a mathematical recurrence relation for $OPT(W)$, the maximum value you can pack into a knapsack of capacity $W$, based on the naive recursive algorithm. Be sure to state your base case(s) and explain how you arrived at your formula.
 
-*Your Answer:* $OPT(W) = 0 if W = 0, else max_{1 <= i <= n} (v_i + OPT(W - w_i))$
+*Your Answer:*
+OPT(W) = {0 if W = 0
+         {OPT(i - 1, W) 
 
 
 ## Part 5: Bottom-Up Dynamic Programming
@@ -70,16 +72,16 @@ Instead of using the slow recursive approach, we can build a table bottom-up.
 
 | Capacity ($W$) | Optimal Value ($OPT$) | Item Chosen |
 |:---:|:---|:---|
-| **0** | | |
-| **1** | | |
-| **2** | | |
-| **3** | | |
-| **4** | | |
-| **5** | | |
-| **6** | | |
+| **0** | **0** | **0** |
+| **1** | **3** | **3** |
+| **2** | **6** | **3, 3** |
+| **3** | **9** | **3, 3, 3** |
+| **4** | **12** | **3, 3, 3, 3** |
+| **5** | **15** | **3, 3, 3, 3, 3** |
+| **6** | **18** | **3, 3, 3, 3, 3, 3** |
 
 *Explain how you calculated the row for $W=6$*
-
+The most optimal value of weight 6 would be 6 iterations of item 3 because it is worth 1 weight and 3 value. 
 
 ## Part 6: Traceback
 
