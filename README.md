@@ -61,7 +61,7 @@ Consider the following simple example:
 
 *Your Answer:*
 OPT(W) = {0 if W = 0
-         {OPT(i - 1, W) 
+         {$max from 1 <= i <= W {v of i + OPT(W - i)}
 
 
 ## Part 5: Bottom-Up Dynamic Programming
@@ -81,10 +81,10 @@ Instead of using the slow recursive approach, we can build a table bottom-up.
 | **6** | **18** | **3, 3, 3, 3, 3, 3** |
 
 *Explain how you calculated the row for $W=6$*
-The most optimal value of weight 6 would be 6 iterations of item 3 because it is worth 1 weight and 3 value. 
+The most optimal value of weight 6 would be 6 iterations of item 3 because it is worth 1 weight and 3 value. The algorithm would find that 6 different versions of item 3 would give the most optimal value. 
 
 ## Part 6: Traceback
 
 **Question:** Using the "Item Chosen" column from the table you completed in Part 5, trace back to find the exact quantities of each item to pack that maximize the value. What is the final optimal packing configuration for $W=6$ and the maximum value?
 
-*Your Answer:*
+*Your Answer:* I would need to have 6 different versions of item 3 to have the maximum value. The final optimal packing configuration for $W=6$ is 6 item 3s with an optimal value of $18. 
